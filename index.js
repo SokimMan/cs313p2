@@ -36,9 +36,20 @@ express()
 	const package = request.query.package;
 
 	//package = package.toLowerCase();
+	let result = 0;
+
+	if (package == "Letter (Stamped)") {
+		result = 3 ;
+	} else if (op == "Letter (Metered)") {
+		result = weight * 1.5 + 1;		
+	} else if (op == "Large Envelope (Flat)") {
+		result = 20;
+	} else if (op == "First Class Package") {
+		result = weight * 1.5 + 35;
+	}
 
     // Set up a JSON object of the values we want to pass along to the EJS result page
-	const params = {package: package, weight: weight};
+	const params = {package: package, weight: weight, result: result};
 
 	// Render the response, using the EJS page "result.ejs" in the pages directory
 	response.render('pages/result', params);
