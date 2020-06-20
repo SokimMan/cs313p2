@@ -19,8 +19,8 @@ express()
     //.get('/cool', (req, res) => res.send(cool()))
 
     // On form submission from form.html call calculateCost function
-    //.get('/cost', calculateCost)
-    .get('/cost', (req, res) => res.render('pages/result'))
+    .get('/cost', calculateCost)
+    //.get('/cost', (req, res) => res.render('pages/result'))
 
     //.listen(PORT, () => console.log(`Listening on ${ PORT }`));
     .listen(PORT, function() {
