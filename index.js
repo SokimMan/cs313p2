@@ -35,7 +35,7 @@ express()
     const weight = Number(request.query.weight);
 	const package = request.query.package;
 
-	package = package.toLowerCase();
+	//package = package.toLowerCase();
 
     // Set up a JSON object of the values we want to pass along to the EJS result page
 	const params = {package: package, weight: weight};
