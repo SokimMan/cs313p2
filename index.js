@@ -14,10 +14,12 @@ express()
     .get('/', (req, res) => res.render('pages/index'))
     //.get('/form.html', (req, res) => res.render('form.html'))
     .get('/cool', (req, res) => res.send(cool()))
+    //.get('/cost', calculateCost)
     //.get('/cool', (req, res) => res.send(cool()))
 
     // On form submission from form.html call calculateCost function
-    .get('/cost', calculateCost)
+    //.get('/cost', calculateCost)
+    .get('/cost', (req, res) => res.render('pages/result'))
 
     .listen(PORT, () => console.log(`Listening on ${ PORT }`));
 
@@ -26,15 +28,15 @@ express()
     // Connects with our form submission
     function calculateCost(request, response) {
 
-    const weight = Number(request.query.weight);
-	const package = request.query.package;
+    //const weight = Number(request.query.weight);
+	//const package = request.query.package;
 
-	package = package.toLowerCase();
+	//package = package.toLowerCase();
 
     // Set up a JSON object of the values we want to pass along to the EJS result page
-	const params = {package: package, weight: weight};
+	//const params = {package: package, weight: weight};
 
 	// Render the response, using the EJS page "result.ejs" in the pages directory
-	response.render('pages/result', params);
+	response.render('pages/result');//, params);
 
     }
