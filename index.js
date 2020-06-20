@@ -40,11 +40,11 @@ express()
 
 	if (package == "Letter (Stamped)") {
 		result = 3 ;
-	} else if (op == "Letter (Metered)") {
+	} else if (package == "Letter (Metered)") {
 		result = weight * 1.5 + 1;		
-	} else if (op == "Large Envelope (Flat)") {
+	} else if (package == "Large Envelope (Flat)") {
 		result = 20;
-	} else if (op == "First Class Package") {
+	} else if (package == "First Class Package") {
 		result = weight * 1.5 + 35;
 	}
 
