@@ -23,7 +23,7 @@ express()
     .get('/cost', (req, res) => res.render('pages/result'))
 
     //.listen(PORT, () => console.log(`Listening on ${ PORT }`));
-    app.listen(PORT, function() {
+    .listen(PORT, function() {
   		console.log('Node app is running on port', port);
 	});
 
