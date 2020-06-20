@@ -24,7 +24,7 @@ express()
 
     //.listen(PORT, () => console.log(`Listening on ${ PORT }`));
     .listen(PORT, function() {
-  		console.log('Node app is running on port', port);
+  		console.log('Node app is running on port', PORT);
 	});
 
 
